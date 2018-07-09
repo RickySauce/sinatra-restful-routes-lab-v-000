@@ -8,6 +8,10 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
+  post '/posts' do
+    binding.pry
+  end
+
   get '/recipes' do
     erb :index
   end

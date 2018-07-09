@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
     binding.pry
   end
 
-  post '/posts' do
+  post '/recipes' do
     binding.pry
   end
 

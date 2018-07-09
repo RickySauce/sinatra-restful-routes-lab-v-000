@@ -27,7 +27,7 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
-  patch '/recipe/:id' do
+  patch '/recipes/:id' do
     binding.pry
     @recipe = Recipe.find_by_id(params[:id])
     @recipe.name = params[:name]
@@ -36,5 +36,7 @@ class ApplicationController < Sinatra::Base
     @recipe.save
     redirect to "/recipes/#{@recipe.id}"
   end
+
+  delete '/'
 
 end

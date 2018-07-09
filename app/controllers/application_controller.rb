@@ -31,7 +31,7 @@ class ApplicationController < Sinatra::Base
     params.delete("_method")
     @recipe = Recipe.find_by_id(params[:id])
     @recipe.update(params)
-    redirect "/recipes/#{@recipe.id}"
+    redirect to "/recipes/#{@recipe.id}"
   end
 
 end

@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
     @recipe = Recipe.find_by_id(params[:id])
     @recipe.update(params)
     @recipe.save
-    redirect to "/recipes/:id"
+    redirect to "/recipes/#{@recipe.id}"
   end
 
 end

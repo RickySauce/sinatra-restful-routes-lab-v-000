@@ -6,6 +6,7 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes/new' do
     erb :new
+    binding.pry
   end
 
   post '/posts' do

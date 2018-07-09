@@ -28,6 +28,7 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/recipe/:id' do
+    binding.pry
   @post = Post.find_by_id(params[:id])
   @post.title = params[:title]
   @post.content = params[:content]

@@ -24,12 +24,10 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes/:id/edit' do
     @recipe = Recipe.find_by(params)
-    binding.pry
     erb :edit
   end
 
   patch '/recipe/:id' do
-    binding.pry
     params.delete("_method")
     @recipe = Recipe.find_by_id(params[:id])
     @recipe.update(params)

@@ -29,11 +29,6 @@ class ApplicationController < Sinatra::Base
 
   patch '/recipe/:id' do
     binding.pry
-  @post = Post.find_by_id(params[:id])
-  @post.title = params[:title]
-  @post.content = params[:content]
-  @post.save
-  redirect "/recipes/#{@recipe.id}"
 end
 
 end
